@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: test
+spec:
+  rules:
+  - host: kuber1
+    http:
+      paths:
+      - backend:
+          serviceName: basic-pod
+          servicePort: 80
